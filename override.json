@@ -3,16 +3,14 @@
         "disable_public_service_endpoint": true,
         "kube_version": "1.23.4",
         "machine_type": "bx2.4x16",
-        "name": "ez-vpc-iks-cluster",
+        "name": "jtpape-iks-cluster",
         "subnets": [
-            "subnet-zone-1",
-            "subnet-zone-2",
-            "subnet-zone-3"
+            "subnet-zone-1"
         ],
         "wait_till": "IngressReady",
         "workers_per_zone": 2
     },
-    "prefix": "ez-vpc",
+    "prefix": "jtpape",
     "vpc": {
         "address_prefixes": null,
         "classic_access": false,
@@ -67,46 +65,6 @@
                     {
                         "action": "allow",
                         "destination": "0.0.0.0/0",
-                        "direction": "inbound",
-                        "icmp": null,
-                        "name": "allow-inbound-ez-vpc-subnet-zone-2",
-                        "source": "10.20.10.0/24",
-                        "tcp": null,
-                        "udp": null
-                    },
-                    {
-                        "action": "allow",
-                        "destination": "10.20.10.0/24",
-                        "direction": "outbound",
-                        "icmp": null,
-                        "name": "allow-outbound-ez-vpc-subnet-zone-2",
-                        "source": "0.0.0.0/0",
-                        "tcp": null,
-                        "udp": null
-                    },
-                    {
-                        "action": "allow",
-                        "destination": "0.0.0.0/0",
-                        "direction": "inbound",
-                        "icmp": null,
-                        "name": "allow-inbound-ez-vpc-subnet-zone-3",
-                        "source": "10.30.10.0/24",
-                        "tcp": null,
-                        "udp": null
-                    },
-                    {
-                        "action": "allow",
-                        "destination": "10.30.10.0/24",
-                        "direction": "outbound",
-                        "icmp": null,
-                        "name": "allow-outbound-ez-vpc-subnet-zone-3",
-                        "source": "0.0.0.0/0",
-                        "tcp": null,
-                        "udp": null
-                    },
-                    {
-                        "action": "allow",
-                        "destination": "0.0.0.0/0",
                         "direction": "outbound",
                         "name": "allow-all-outbound",
                         "source": "0.0.0.0/0"
@@ -123,31 +81,13 @@
                     "name": "subnet-zone-1",
                     "public_gateway": true
                 }
-            ],
-            "zone-2": [
-                {
-                    "acl_name": "acl",
-                    "cidr": "10.20.10.0/24",
-                    "name": "subnet-zone-2",
-                    "public_gateway": true
-                }
-            ],
-            "zone-3": [
-                {
-                    "acl_name": "acl",
-                    "cidr": "10.30.10.0/24",
-                    "name": "subnet-zone-3",
-                    "public_gateway": true
-                }
             ]
         },
         "use_manual_address_prefixes": null,
         "use_public_gateways": {
-            "zone-1": true,
-            "zone-2": true,
-            "zone-3": true
+            "zone-1": true
         },
-        "vpc_name": "vpc",
+        "vpc_name": "vee-pee-cee",
         "vpn_gateways": []
     }
 }
