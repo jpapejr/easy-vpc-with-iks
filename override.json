@@ -1,7 +1,7 @@
 {
     "cluster": {
         "disable_public_service_endpoint": true,
-        "kube_version": "1.23.4",
+        "kube_version": "1.23",
         "machine_type": "bx2.4x16",
         "name": "jtpape-iks-cluster",
         "subnets": [
