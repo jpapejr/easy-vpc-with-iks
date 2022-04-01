@@ -108,6 +108,7 @@
                         "source": "0.0.0.0/0",
                         "tcp": null,
                         "udp": null
+                    }
                 ]
             }
         ],
